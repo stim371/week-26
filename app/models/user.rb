@@ -58,11 +58,4 @@ class User < ActiveRecord::Base
 
   alias_method :has_facebook_account?, :facebook_account
 
-  def self.current
-    Thread.current[:user]
-  end
-  def self.current=(user)
-    Thread.current[:user] = user
-  end
-
 end
